@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Django site</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; }
+    li { margin: .25rem 0; }
+  </style>
+</head>
+<body>
+  <h1>It works</h1>
+  <p>This page is <code>pages/templates/pages/home.html</code>. Notes are added in the
+     <a href="/admin/">admin</a> (create a login first: see the README, "createsuperuser").</p>
+  <h2>Latest notes</h2>
+  <ul>
+    {% for note in notes %}<li>{{ note.text }}</li>{% empty %}<li>No notes yet.</li>{% endfor %}
+  </ul>
+</body>
+</html>

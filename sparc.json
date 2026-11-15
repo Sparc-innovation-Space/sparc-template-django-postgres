@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "port": 8080,
+  "health_path": "/healthz",
+  "build_method": "auto",
+  "start_command": "sh bin/start.sh",
+  "database": { "type": "postgres" },
+  "settings": {
+    "DJANGO_DEBUG": "0"
+  },
+  "secrets": [
+    { "name": "DJANGO_SECRET_KEY", "kind": "django-secret-key" }
+  ]
+}
